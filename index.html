@@ -36,12 +36,11 @@
 
         </nav>
     </header>
-
     <main>
         <div class="flex-container">
-            <h1>We build the future</h1>
+            <h1 class="titulo-principal">We Build The Future</h1>
         </div>
-        <p>best deas- best demon-best result</p>
+        <p>best deas- best - demon-best result</p>
         <button class="cta">
             <span>Hover me</span>
             <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -50,6 +49,21 @@
             </svg>
           </button>
     </main>
+    <script>
+        function typeWrite(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = ' ';
+            textoArray.forEach(function(letra, i) {
+
+                setTimeout(function() {
+                    elemento.innerHTML += letra;
+                }, 75 * i)
+
+            });
+        }
+        const titulo = document.querySelector('.titulo-principal');
+        typeWrite(titulo);
+    </script>
 </body>
 
 </html>
